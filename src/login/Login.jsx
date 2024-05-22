@@ -17,7 +17,9 @@ function Login() {
       <button onClick={buttonClicked} id="start">
         Teste Başla!
       </button>
-      <p className="login-para">QuestionApp 10 Sorudan olusmaktadir. Her soru ekranda 30 sn kalicak ve ilk 10 sn cevap siklarini goremiceksin. Sorulari cevapladiktan sonra Puan'ını ve Dogru/Yanlis cevaplarini goruyor olucaksin. Basarilar diliyorum....</p>
+      <p className="login-para">QuestionApp 10 Sorudan olusuyor.
+      Herbir soruyu cevaplamak icin 30 saniyen var. 10 saniyeden sonra cevap verebileceksin. 
+      Sonuc kısmında puanını ve yanlis cevapladigin soruların dogru cevaplarini bulacaksin. Basarilar....</p>
     </div>
   );
 }
