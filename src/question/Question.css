@@ -28,7 +28,7 @@
   }
   
   .question-border p {
-    font-size: 20px;
+    font-size: 1rem;
     text-align: center;
     font-weight: 700;
   }
@@ -58,6 +58,10 @@
     box-shadow: grey;
   }
   
+  .answer-container button{
+    font-size: 1rem;
+  }
+
   .answer-container button:hover {
     background-color: rgba(255, 166, 0, 0.8);
   }
