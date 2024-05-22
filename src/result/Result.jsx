@@ -1,12 +1,10 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { appContext } from "../context/AppContext";
 import "./Result.css";
 import questions from "../questions.js";
 
 function Result() {
-  const { correctCounter, chosenAnswers, answeredCount } =
-    useContext(appContext);
+  const { correctCounter, chosenAnswers } = useContext(appContext);
 
   return (
     <div className="result-container">
@@ -19,9 +17,14 @@ function Result() {
         <h2 className="header">Answers</h2>
         <ul className="result-list">
           {chosenAnswers.map((answer) => {
+            const question = questions.find((item) => item.id === answer.id);
+            const isCorrect = answer.chosenAnswer === question.answer;
+
             return (
               <li key={answer.id}>
-                Soru {answer.id}: {answer.chosenAnswer} / Doğru Cevap : {questions.find((item) => item.id == answer.id).answer}
+                {isCorrect
+                  ? ` ${answer.id}. Soruyu : Doğru Cevapladınız`
+                  : `${answer.id}. Soruya verdiğiniz cevap ${answer.chosenAnswer} / Doğru Cevap : ${question.answer}`}
               </li>
             );
           })}
