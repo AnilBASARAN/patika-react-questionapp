@@ -13,7 +13,7 @@ function Login() {
 
   return (
     <div className="login">
-       <img className="logo" src="/assets/patika-logo.png" alt="" />
+       <img className="logo" src="/assets/patika-logo.png" alt="patika plus logo photo" />
       <button onClick={buttonClicked} id="start">
         Teste Başla!
       </button>
